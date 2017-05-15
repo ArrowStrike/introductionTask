@@ -20,7 +20,6 @@ class Content
             $text = $_POST['text'];
             $text = self::textSecurity($text);
 
-
             if ($text === "") {
                 $sqlQuery = "DELETE FROM content WHERE id='{$id}'";
             } else {
@@ -30,6 +29,7 @@ class Content
                     $sqlQuery = "INSERT INTO content (id, text) VALUES ('{$id}','{$text}')";
                 }
             }
+
             $result = $GLOBALS['DB']->prepare($sqlQuery);
             $result->execute();
 
@@ -53,7 +53,6 @@ class Content
 
     public static function textSecurity($text)
     {
-
         $text = trim($text);
         $text = addslashes($text);
         $text = htmlspecialchars($text);
@@ -76,7 +75,7 @@ class Content
             ?>
             <a href="index.php?editID=<?php echo $contentID; ?>"
                target="_blank"
-               onClick="popupWin = window.open(this.href, 'newWindow', 'location, width=400, height=300');
+               onClick="popupWin = window.open(this.href, 'newWindow', 'location, width=700, height=400');
                                            popupWin.focus();
                                            return false;">
                 <span class="glyphicon glyphicon-edit"></span>
