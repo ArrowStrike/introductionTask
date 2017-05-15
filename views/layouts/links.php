@@ -15,4 +15,3 @@
 <link rel="shortcut icon"
       href="/public/media/images/books.ico"
       type="image/x-icon">
-

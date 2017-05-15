@@ -10,6 +10,13 @@ class Content
 
         $contentItem = $result->fetch();
 
+        if (!$contentItem) {
+            $contentItem = array(
+                'id' => $id,
+                'text' => '',
+            );
+        }
+
         return $contentItem;
     }
 
@@ -39,7 +46,9 @@ class Content
 
     public static function getText($id, $defaultValue)
     {
-        if (!$content = self::getContentById($id)) {
+        $content = self::getContentById($id);
+        var_dump($content);
+        if ($content['text']==='') {
             $content = array(
                 'id' => $id,
                 'text' => $defaultValue,
