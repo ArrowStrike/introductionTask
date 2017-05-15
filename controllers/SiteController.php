@@ -16,6 +16,10 @@ class SiteController
     {
         Content::contentEdit($contentID);
         $contentItem = Content::getContentById($contentID);
+        $text = '';
+        if ($contentItem) {
+            $text = $contentItem['text'];
+        }
         require_once(ROOT.'/views/site/contentEdit.php');
     }
 }

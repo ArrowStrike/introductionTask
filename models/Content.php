@@ -10,13 +10,6 @@ class Content
 
         $contentItem = $result->fetch();
 
-        if (!$contentItem) {
-            $contentItem = array(
-                'id' => $id,
-                'text' => '',
-            );
-        }
-
         return $contentItem;
     }
 
@@ -27,7 +20,7 @@ class Content
             $text = $_POST['text'];
             $text = self::textSecurity($text);
 
-            if ($text === "") {
+            if ($text === '') {
                 $sqlQuery = "DELETE FROM content WHERE id='{$id}'";
             } else {
                 if (self::getContentById($id)) {
@@ -47,8 +40,7 @@ class Content
     public static function getText($id, $defaultValue)
     {
         $content = self::getContentById($id);
-
-        if ($content['text'] === '') {
+        if (!$content) {
             $content = array(
                 'id' => $id,
                 'text' => $defaultValue,

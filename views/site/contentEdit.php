@@ -18,7 +18,7 @@
         <form class="navbar-form navbar-left" method='POST'>
             <div class="form-group">
         <textarea name="text" class="form-control"
-                  placeholder="Enter text"><?php echo html_entity_decode($contentItem['text']); ?></textarea><br>
+                  placeholder="Enter text"><?php echo html_entity_decode($text); ?></textarea><br>
             </div>
             <input class="btn btn-default" id="" type="submit" name="save" value="Save">
         </form>
