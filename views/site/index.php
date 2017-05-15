@@ -18,6 +18,7 @@ include ROOT."/views/layouts/header.php"; ?>
                                     ); ?>
                                 </div>
                             </article>
+
                             <article class="article">
                                 <div class="article__info__preview">
                                     <?php Content::getText(
@@ -35,6 +36,7 @@ include ROOT."/views/layouts/header.php"; ?>
                                     ); ?>
                                 </div>
                             </article>
+
                             <article class="article">
                                 <div class="article__info__preview">
                                     <?php Content::getText(
@@ -43,6 +45,7 @@ include ROOT."/views/layouts/header.php"; ?>
                                     ); ?>
                                 </div>
                             </article>
+
                         </div>
                     </div>
                 </div>

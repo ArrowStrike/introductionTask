@@ -79,8 +79,7 @@ class Content
                onClick="popupWin = window.open(this.href, 'newWindow', 'location, width=400, height=300');
                                            popupWin.focus();
                                            return false;">
-
-                <img src="/public/media/images/edit-button.png">
+                <span class="glyphicon glyphicon-edit"></span>
             </a>
         <?php }
     }
