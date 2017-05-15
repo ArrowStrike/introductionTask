@@ -47,8 +47,8 @@ class Content
     public static function getText($id, $defaultValue)
     {
         $content = self::getContentById($id);
-        var_dump($content);
-        if ($content['text']==='') {
+
+        if ($content['text'] === '') {
             $content = array(
                 'id' => $id,
                 'text' => $defaultValue,

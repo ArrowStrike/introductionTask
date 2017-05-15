@@ -8,7 +8,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">ID of content</div>
     <div class="panel-body">
-        <?php echo $contentID;?>
+        <?php echo $contentID; ?>
     </div>
 </div>
 

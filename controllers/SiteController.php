@@ -6,6 +6,7 @@ class SiteController
     {
         if (isset($_GET['editID'])) {
             self::actionContentEdit($_GET['editID']);
+
             return true;
         }
         require_once(ROOT.'/views/site/index.php');
